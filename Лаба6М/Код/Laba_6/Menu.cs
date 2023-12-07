@@ -26,7 +26,7 @@ namespace Laba_6
                 switch (choice)
                 {
                     case 1:
-                        Console.Clear(); Matrix matrix = new Matrix(); choiceFill(matrix); matrix.ShowMatrix(); matrix.DeleteRow(); matrix.ShowMatrix(); Console.WriteLine(); break;
+                        Console.Clear(); Matrix matrix = new Matrix(); choiceFill(matrix); matrix.ShowMatrix(); matrix.DeleteRow(); matrix.ShowMatrix(); matrix.ContinuePartOne(); Console.WriteLine(); break;
                     case 2:
                         Console.Clear(); Str str = new Str(); choiceFill(str); str.ShowStr(); str.CyclicShift(); str.ShowStr(); break;
                     case 3:

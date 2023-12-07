@@ -113,5 +113,27 @@ namespace Laba_6
             }
             return indexForDelete;
         }
+        public void ContinuePartOne()
+        {
+            string msg = "\n1. Продолжить задание\n2. Перейти к следующему\n-> ", errorMsg = "\nТакого пункта меню не существует!\n";
+            bool notExit = true;
+
+            do
+            {
+                int choice = CheckAndInput.InputIntNumber(msg);
+
+                if (choice == 1)
+                {
+                    DeleteRow();
+                    ShowMatrix();
+                    ContinuePartOne();
+                    notExit = false;
+                }
+                else if (choice == 2)
+                    return;
+                else
+                    Console.WriteLine(errorMsg);
+            } while (notExit);
+        }
     }
 }
